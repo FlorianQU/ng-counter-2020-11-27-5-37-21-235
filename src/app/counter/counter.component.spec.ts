@@ -8,9 +8,9 @@ describe('CounterComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CounterComponent ]
+      declarations: [CounterComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
@@ -23,11 +23,20 @@ describe('CounterComponent', () => {
     expect(component).toBeTruthy();
   });
   it('should increase count when click plus button', (): void => {
-    //given
+    // given
     component.count = 0;
-    //when
+    // when
     component.increaseCount();
-    //then
+    // then
     expect(component.count).toBe(1);
+  });
+
+  it('should decrease count when click minus button', (): void => {
+    // given
+    component.count = 1;
+    // when
+    component.decreaseCount();
+    // then
+    expect(component.count).toBe(0);
   });
 });
