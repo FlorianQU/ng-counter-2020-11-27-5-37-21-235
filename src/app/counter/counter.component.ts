@@ -14,11 +14,31 @@ export class CounterComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  increaseCount(): void{
+  checkForPlus(): boolean {
+    return this.count <= 10;
+  }
+
+  checkForMinus(): boolean {
+    return this.count >= 0;
+  }
+
+  increaseCount(): void {
     this.count++;
   }
 
-  decreaseCount(): void{
+  decreaseCount(): void {
     this.count--;
+  }
+
+  checkForGreen(): boolean {
+    return this.count < 0;
+  }
+
+  checkForRed(): boolean {
+    return this.count > 10;
+  }
+
+  reset(): void {
+    this.count = 0;
   }
 }

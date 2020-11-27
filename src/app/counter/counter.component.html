@@ -1,4 +1,6 @@
-<button *ngIf="count <=10" (click)="increaseCount()">+</button> <label [ngClass]="{'low': count < 0}">nubmer:
+<button *ngIf="checkForPlus()" (click)="increaseCount()">+</button>
+<label [ngClass]="{'low': checkForGreen(), 'high': checkForRed()}">nubmer:
   {{count}}</label>
 <!-- <p>counter works!</p> -->
-<button *ngIf="count >= 0" (click)="decreaseCount()">-</button>
+<button *ngIf="checkForMinus()" (click)="decreaseCount()">-</button>
+<button  (click)="reset()"> reset </button>
