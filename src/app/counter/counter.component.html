@@ -1,4 +1,3 @@
- <button (click)="increaseCount()">+</button> <label>nubmer: {{count}}</label>
- <!-- <p>counter works!</p> -->
- <button (click)="decreaseCount()">-</button>
-
+<button (click)="increaseCount()">+</button> <label>nubmer: {{count}}</label>
+<!-- <p>counter works!</p> -->
+<button *ngIf="count >= 0" (click)="decreaseCount()">-</button>
